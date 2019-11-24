@@ -1,0 +1,15 @@
+[package]
+name = "debug_crate2nix"
+version = "0.1.0"
+authors = ["Dima <dgoldin+github@protonmail.ch>"]
+edition = "2018"
+
+[dependencies.libpulse-binding]
+optional = true
+version = "2.6.0"
+default-features = false
+features = ["pa_v12_compatibility"]
+
+[features]
+default = [ "pulse" ]
+pulse = [ "libpulse-binding" ]
